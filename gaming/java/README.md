@@ -1,10 +1,10 @@
-This directory contains a running series of Spark examples that correspond to
-a similar series of Dataflow examples, which live at:
-
-http://github.com/GoogleCloudPlatform/DataflowJavaSDK-examples/tree/master/src/main/java8/com/google/cloud/dataflow/examples/complete/game
-
 This code is intended to be used to contrast how the Spark Java solution to
 a problem differs from the Dataflow solution to a problem.
+
+Before diving in here, you likely want to read [Dataflow/Beam & Spark:
+A Programming Model Comparison](https://cloud.google.com/dataflow/blog/dataflow-beam-and-spark-comparison).
+
+The equivalent Dataflow code lives in [GoogleCloudPlatform/DataflowJavaSDK-examples](http://github.com/GoogleCloudPlatform/DataflowJavaSDK-examples/tree/master/src/main/java8/com/google/cloud/dataflow/examples/complete/game) and is documented in [Mobile Gaming Pipeline Examples](https://cloud.google.com/dataflow/examples/gaming-example).
 
 You will want a Dataproc cluster to run these samples on. This command line
 will stand up a simple 5 worker cluster with all the appropriate scopes
