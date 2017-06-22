@@ -10,7 +10,7 @@ You will want a Dataproc cluster to run these samples on. This command line
 will stand up a simple 5 worker cluster with all the appropriate scopes
 needed to communicate with other Cloud Platform services:
 
-    $ gcloud beta dataproc clusters create spark-demo \
+    $ gcloud dataproc clusters create spark-demo \
     --scopes cloud-platform \
     --worker-machine-type n1-standard-4 \
     --num-workers 5
@@ -44,7 +44,7 @@ See below for instructions on how to run each sample individually.
 
 You can run your job on Dataproc like so:
 
-    $ gcloud beta dataproc jobs submit spark \
+    $ gcloud dataproc jobs submit spark \
         --cluster $DATAPROC_CLUSTER \
         --class com.google.cloud.sparkdemo.UserScore \
         --jar target/game-1.0-SNAPSHOT-jar-with-dependencies.jar \
@@ -57,7 +57,7 @@ You can run your job on Dataproc like so:
 
 You can run the job on Dataproc as follows:
 
-    $ gcloud beta dataproc jobs submit spark \
+    $ gcloud dataproc jobs submit spark \
         --cluster $DATAPROC_CLUSTER \
         --class com.google.cloud.sparkdemo.HourlyTeamScore \
         --jar target/game-1.0-SNAPSHOT-jar-with-dependencies.jar \
@@ -79,7 +79,7 @@ You can run locally using spark-submit like so:
 
 You can run also the job on Dataproc as follows:
 
-    $ gcloud beta dataproc jobs submit spark \
+    $ gcloud dataproc jobs submit spark \
         --cluster $DATAPROC_CLUSTER \
         --properties spark.streaming.receiver.writeAheadLog.enabled=true,spark.executor.memory=4g,spark.executor.instances=10 \
         --class com.google.cloud.sparkdemo.LeaderBoard \
@@ -103,7 +103,7 @@ You can run locally using spark-submit like so:
 
 You can run also the job on Dataproc as follows:
 
-    $ gcloud beta dataproc jobs submit spark \
+    $ gcloud dataproc jobs submit spark \
         --cluster $DATAPROC_CLUSTER \
         --properties spark.streaming.receiver.writeAheadLog.enabled=true,spark.executor.memory=4g,spark.executor.instances=10 \
         --class com.google.cloud.sparkdemo.GameStats \
